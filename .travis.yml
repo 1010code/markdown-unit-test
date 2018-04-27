@@ -12,4 +12,5 @@ before_script:
 script:
     - "bash ./check_links.sh"
 
-
+after_script:
+    - "echo ${?}"
