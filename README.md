@@ -31,9 +31,11 @@ markdown-link-check Article.md
 ```
 
 若連結正常則會通過測試。
+
 <img src="screenshot/img02.png">
 
 試著把連結改成無意義的(例如 localhost)你會發現跑出失敗訊息，代表你的文章內的網址失效啦～
+
 <img src="screenshot/img03.png">
 
 ## 進階教學
