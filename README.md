@@ -1,4 +1,6 @@
-# markdown 文件也能做單元測試？
+[![Build Status](https://travis-ci.org/1010code/markdown-unit-test.svg?branch=master)](https://travis-ci.org/1010code/markdown-unit-test)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/1010code/markdown-unit-test/blob/master/LICENSE)
+# Markdown 文件也能做單元測試？
 單元測試對開發者來說在也平常也不過了，透過單元測試能夠快速的了解專案的健康狀態，此篇要講的是關於 `Markdown` 的單元測試，什麼！文件要怎麼做測試？可以的當你文章量多每一篇的連結(URL)可能隨時間增長而失效，你總不可能每次在每篇一一的去打開測試吧？一般來說是等到看這篇文章的讀者發現連結失效在反映給作者，但導入單元測試後直接交給電腦檢查就好啦！
 
 ## 教學
@@ -74,7 +76,7 @@ bash ./check_links.sh
 <img src="screenshot/img04.png">
 
 ### 整合 Travis-CI
-進入 Travis-CI 網站並連動你的帳戶，這邊使用 GitHub 作為示範，進入後就可以選擇你要測試的 Respiratory 進行連動。
+進入 [Travis-CI](https://travis-ci.org) 網站並連動你的帳戶，這邊使用 GitHub 作為示範，進入後就可以選擇你要測試的 Respiratory 進行連動。
 
 <img src="screenshot/img05.png">
 
@@ -99,3 +101,12 @@ script:
 after_script:
     - "echo ${?}"
 ```
+
+### push 到 GitHub
+一切準備就緒後就把我們的專案 push 到 GitHub 上吧！我們先前有先跟 Travis-CI 做連動專案了，所以當有提交更新時 Travis-CI 會自動被出發而進行單元測試。
+
+測試成功後會看到以下畫面：
+<img src="screenshot/img06.png">
+
+## LICENSE
+MIT
