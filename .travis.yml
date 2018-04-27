@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+    - "9"
+    - "8"
+    - "7"
+    - "6"
+
+before_script:
+    - "npm install -g markdown-link-check"
+
+script:
+    - "bash ./check_links.sh"
+
+
