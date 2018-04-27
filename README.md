@@ -30,25 +30,25 @@ npm install -g markdown-link-check
 markdown-link-check Article.md
 ```
 
-若連結正常則會通過測試。
+若連結正常則會通過測試。
 <img src="screenshot/img02.png">
 
-試著把連結改成無意義的(例如 localhost)你會發現跑出失敗訊息，代表你的文章內的網址失效啦～
+試著把連結改成無意義的(例如 localhost)你會發現跑出失敗訊息，代表你的文章內的網址失效啦～
 <img src="screenshot/img03.png">
 
 ## 進階教學
-那當我文章內容很多時怎麼辦？我可以結合到 CI 平台嗎？可以都可以我接下來會教你如何撰寫 bash 腳本來執行檢查全部的 Markdown 文件以及透過 Travis-CI 做單元測試。
+那當我文章內容很多時怎麼辦？我可以結合到 CI 平台嗎？可以都可以我接下來會教你如何撰寫 bash 腳本來執行檢查全部的 Markdown 文件以及透過 Travis-CI 做單元測試。
 
 ### 撰寫多個 Markdown 文件
 
 這邊不用示範了吧～請各位多建立幾個 `.md` 檔案以利測試。
 
 ### 撰寫測試腳本
-`res_code` 是變數， 1 代表文章有其中有連結失效，0 代表全部正常。
+`res_code` 是變數， 1 代表文章有其中有連結失效，0 代表全部正常。
 
 接著會進入迴圈來檢查每一篇文章的連結 `${markdown}` 類似 JavaScript 中的字串變數，指的是文章的檔名。
 
-還記得 `res_code` 變數嗎？最後會有個 `exit` 代表執行結束，一般執行正常會回傳 0。
+還記得 `res_code` 變數嗎？最後會有個 `exit` 代表執行結束，一般執行正常會回傳 0。
 
 ```bash
 #!/bin/sh
